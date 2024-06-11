@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable(
-      "pokemon",
+      "pokedex",
       {
         id: {
           allowNull: false,
@@ -37,6 +37,6 @@ module.exports = {
     );
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("pokemon");
+    await queryInterface.dropTable("pokedex");
   },
 };
