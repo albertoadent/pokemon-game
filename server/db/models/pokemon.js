@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   pokemon.init({
-    name: DataTypes.INTEGER,
-    type: DataTypes.STRING,
-    api_url_call: DataTypes.STRING,
+    nickname: DataTypes.STRING,
+    level: DataTypes.INTEGER,
+    poke_id: DataTypes.INTEGER,
+    user_id:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'pokemon',

@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class pokemonInstance extends Model {
+  class pokedex extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,14 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  pokemonInstance.init({
-    nickname: DataTypes.STRING,
-    level: DataTypes.INTEGER,
-    poke_id: DataTypes.INTEGER,
-    user_id:DataTypes.INTEGER
+  pokedex.init({
+    name: DataTypes.INTEGER,
+    type: DataTypes.STRING,
+    api_url_call: DataTypes.STRING,
   }, {
     sequelize,
-    modelName: 'pokemon-instance',
+    modelName: 'pokedex',
   });
-  return pokemon - instance;
+  return pokedex;
 };
